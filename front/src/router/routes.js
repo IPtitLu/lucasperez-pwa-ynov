@@ -11,9 +11,7 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: 'v2', component: () => import('pages/TutoPage.vue') },
-      {
-        path: 'v3', component: () => import('pages/TutoPageVue3.vue')
-      }
+      { path: 'v3', component: () => import('pages/TutoPageVue3.vue') }
     ]
   },
   {
