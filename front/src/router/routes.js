@@ -15,6 +15,9 @@ const routes = [
     ]
   },
   {
+    path: '/list/:id', component: () => import('pages/ListDetail.vue')
+  },
+  {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
   }

@@ -1,5 +1,9 @@
 import { api } from 'boot/axios'
 
-export function getAllTasks () {
-  return api.get('/tasks')
+export function getAllTasksByListId (param) {
+  return api.get(`/tasks/list/${param}`)
+}
+
+export function putTask (param) {
+  return api.put(`/tasks/${param}`)
 }

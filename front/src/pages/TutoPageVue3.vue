@@ -48,7 +48,6 @@ const visible = ref(false)
 const tasksReactive = ref([])
 const message = ref('Hello')
 const name = ref('Unknown')
-const checked = ref(false)
 const selected = ref('')
 const tasks = ref([
   { title: 'Task 1' },
@@ -75,7 +74,4 @@ function toggleHidden () {
   visible.value = !visible.value
 }
 
-// watch('message', (val) => {
-//   console.log('watched message value', val)
-// })
 </script>

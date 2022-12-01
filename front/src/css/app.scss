@@ -1,1 +1,54 @@
 // app global css in SCSS form
+
+.list-detail {
+    .task-list {
+        margin-bottom: 50px;
+        h3 {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 20px;
+            color: #38343A;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0;
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                background-color: #F2F2F2;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 10px;
+                input {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    
+    .task-completed-list {
+        h3 {
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 20px;
+            color: #38343A;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0;
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                background-color: #F2F2F2;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 10px;
+                input {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
