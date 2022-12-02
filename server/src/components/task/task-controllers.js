@@ -20,6 +20,26 @@ export async function getAllByListId (ctx) {
   }
 }
 
+export async function getAllUncompletedByListId (ctx) {
+  try {
+    if(ctx.params.id.length <= 0) return ctx.notFound({ message: 'Id missing, list ressource not found' })
+    const tasks = await Task.find({ "list": { _id: ctx.params.id}, "done": false});
+    ctx.ok(tasks)
+  } catch (e) {
+    ctx.badRequest({ message: e.message })
+  }
+}
+
+export async function getAllCompletedByListId (ctx) {
+  try {
+    if(ctx.params.id.length <= 0) return ctx.notFound({ message: 'Id missing, list ressource not found' })
+    const tasks = await Task.find({ "list": { _id: ctx.params.id}, "done": true});
+    ctx.ok(tasks)
+  } catch (e) {
+    ctx.badRequest({ message: e.message })
+  }
+}
+
 
 export async function id (ctx) {
   try {

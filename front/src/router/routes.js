@@ -7,15 +7,11 @@ const routes = [
     ]
   },
   {
-    path: '/tuto',
+    path: '/list/:id',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'v2', component: () => import('pages/TutoPage.vue') },
-      { path: 'v3', component: () => import('pages/TutoPageVue3.vue') }
+      { path: '', component: () => import('pages/ListPage.vue') }
     ]
-  },
-  {
-    path: '/list/:id', component: () => import('pages/ListDetail.vue')
   },
   {
     path: '/:catchAll(.*)*',
